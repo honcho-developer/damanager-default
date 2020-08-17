@@ -1,1 +1,1 @@
-# damanager-default
+# parked-domain

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Da Manager | Web Hosting Server</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Open+Sans"
+      rel="stylesheet"
+    />
+
+    <style>
+      a {
+        color: #ed9000;
+      }
+
+      a:hover {
+        color: #12487e;
+      }
+
+      .font-family-opensans {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+      body {
+        cursor: pointer;
+        background: white;
+      }
+      h6 {
+        text-align: center;
+      }
+      .top-bar {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0;
+      }
+      .logo {
+        padding-bottom: 15px;
+        width: 11vw;
+      }
+      .searchBtn {
+        background: #13487e;
+        width: fit-content;
+        color: #ffffff;
+        width: 7vw;
+        height: 5vh;
+        padding: 0;
+        border: none;
+      }
+      input {
+        margin-left: 10px;
+        padding: 10px 20px;
+        height: 5vh;
+        width: 25vw;
+      }
+      .padding {
+        padding-top: 20px;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+      .domain-image {
+        width: 40vw;
+      }
+      .domain-image1 {
+        width: 40vw;
+      }
+      .first-text {
+        text-align: left;
+        padding: 90px;
+        color: black;
+      }
+      p {
+        text-align: left;
+      }
+      .title{
+          color: white;
+      }
+      .mid-text {
+        text-align: right;
+        padding: 90px;
+        color: #ffffff;
+      }
+      .mid-text p {
+        text-align: right;
+      }
+
+      .mid-card {
+        margin-top: 150px;
+        height: 340px;
+        background: #ed9000;
+        position: relative;
+        /* overflow-x: hidden; */
+        /* overflow: hidden; */
+      }
+      .lady-image {
+        width: 430px;
+        height: 380px;
+        top: -40px;
+        right: 40px;
+        position: absolute;
+      }
+
+      .btm-card {
+        height: 50vh;
+        background: #13487e;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+
+      #extra-information .card-body {
+        padding-left: 65px !important;
+      }
+
+      #extra-information .card-title i {
+        position: absolute;
+        left: -45px;
+        top: 5px;
+      }
+
+      #extra-information .card-title::before {
+        background-color: #12487e;
+        content: "";
+        display: block;
+        height: 30px;
+        position: absolute;
+        left: -65px;
+        top: -2px;
+        width: 5px;
+      }
+
+      #extra-information .title {
+        letter-spacing: 1.8px;
+        position: relative;
+      }
+
+      #extra-information .title::before {
+        background-color: #c5c5c5;
+        content: "";
+        display: block;
+        height: 5px;
+        position: absolute;
+        bottom: -15px;
+        width: 80px;
+      }
+
+      @media only screen and (max-width: 460px) {
+        .logo {
+          width: 21vw;
+          height: 8vh;
+        }
+        .searchBtn {
+          background: #13487e;
+          width: fit-content;
+          color: #ffffff;
+          font-size: small;
+          width: 15vw;
+          height: 6vh;
+          padding: 0;
+          border: none;
+        }
+        input {
+          margin-left: 10px;
+          font-size: 12px;
+          padding: 4px;
+          height: 6vh;
+          width: 35vw;
+        }
+        .first-text {
+          text-align: left;
+          padding: 20px;
+          color: black;
+        }
+        p {
+          text-align: left;
+        }
+        .mid-text {
+          text-align: right;
+          padding: 15px 35px 0px 35px;
+          background: rgba(250, 41, 41, 0.4);
+          color: #ffffff;
+          height: 80%;
+        }
+
+        .mid-text p {
+          text-align: right;
+          font-size: small;
+        }
+
+        .mid-card {
+          margin-top: 150px;
+          height: 340px;
+          background: #ed9000;
+          position: relative;
+          /* overflow-x: hidden; */
+          /* overflow: hidden; */
+        }
+        .lady-image {
+          width: 430px;
+          height: 380px;
+          top: -70px;
+          right: 0;
+          position: absolute;
+        }
+        .domain-image {
+          width: 100vw;
+        }
+        .btm-card {
+          padding: 20px 0;
+          height: fit-content;
+        }
+      }
+      @media only screen and (max-width: 860px) {
+        .logo {
+          width: 31vw;
+          height: 8vh;
+        }
+        .searchBtn {
+          background: #13487e;
+          width: fit-content;
+          color: #ffffff;
+          width: 15vw;
+          height: 6vh;
+          padding: 0;
+          border: none;
+        }
+        input {
+          margin-left: 10px;
+          padding: 4px;
+          height: 6vh;
+          width: 35vw;
+        }
+        .first-text {
+          text-align: left;
+          padding: 20px;
+          color: black;
+        }
+        p {
+          text-align: left;
+        }
+        .mid-text {
+          text-align: right;
+          margin: 0 50px;
+          padding: 45px 45px 0px 45px;
+          background: rgba(0, 0, 0, 0.4);
+          color: #ffffff;
+          height: 80%;
+        }
+
+        .mid-text p {
+          text-align: right;
+        }
+
+        .mid-card {
+          margin-top: 150px;
+          height: 340px;
+          background: #ed9000;
+          position: relative;
+          /* overflow-x: hidden; */
+          /* overflow: hidden; */
+        }
+      
+        .lady-image {
+          width: 430px;
+          height: 380px;
+          top: -70px;
+          left: 30;
+          position: absolute;
+        }
+        .domain-image {
+          width: 90vw;
+        }
+        .domain-image1 {
+          width: 90vw;
+        }
+        .btm-card {
+          padding: 20px 0;
+          height: fit-content;
+        }
+        .container-fluid {
+          display: flex;
+          padding: 30px;
+          justify-content: center;
+        }
+        #extra-information .card-deck {
+          border-spacing: 1.25rem 0;
+          display: block;
+          margin-bottom: 0.75rem;
+          table-layout: fixed;
+          width: 100%;
+        }
+
+        #extra-information .card-deck .card {
+          width: 100%;
+        }
+      }
+      @media only screen and (min-width: 920px) {
+        .domain-image {
+          width: 40vw;
+        }
+        .domain-image1 {
+          width: 40vw;
+        }
+        .container-fluid {
+          display: flex;
+
+          justify-content: center;
+        }
+
+        .btm-card {
+          background: #13487e;
+          padding: 20px 0;
+          height: fit-content;
+        }
+        #extra-information .card-deck {
+          table-layout: fixed;
+          width: 100%;
+        }
+
+        #extra-information .card-deck .card {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <br />
+      <h6>This Web Page was Parked Free at Da-Manager</h6>
+      <div class="top-bar">
+        <a href="https://www.da-manager.com"
+          ><img class="logo" src="./img/Da-ManagerWebLogo.png" alt="" srcset=""
+        /></a>
+        <form
+          action="https://my.da-manager.com/cart.php?a=add&domain=register"
+          method="post"
+        >
+          <input
+            type="text"
+            placeholder="Find your Domain"
+            name="query"
+            size="20"
+          />
+          <input class="searchBtn" type="submit" value="Search" />
+        </form>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="first-text col-md-12 col-lg-6">
+            <h5 class="sub-title">Web Domain</h5>
+
+            <p>
+                Domain names are used in various networking contexts and for application-specific naming and addressing purposes.
+            </p>
+
+            <br />
+            <a href="https://www.da-manager.com/clients/knowledgebase/15/Domains" class="btn btn-primary">Get Domain</a>
+          </div>
+          <div class="col-lg-6">
+            <img
+              class="img-fluid domain-image1"
+              src="img/markus-winkler-j2tExQL-OyA-unsplash.jpg"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mid-card">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <img
+              class="img-fluid lady-image"
+              src="img/woman.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="mid-text col-md-12 col-lg-6">
+            <h5 class="sub-title">Web Domain</h5>
+
+            <p>
+                The registration of these domain names is usually administered by domain name registrars who sell their services to the public.
+            </p>
+
+            <br />
+            <a href="https://www.da-manager.com/clients/knowledgebase/15/Domains" class="btn btn-primary">Get Domain</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="btm-card">
+      <section id="extra-information">
+        <div class="container">
+          <div class="row">
+            <div class="col p-lg-5 mb-5 mb-lg-0">
+              <h5
+                class="title font-weight-bold mb-5 text-uppercase font-family-lato"
+              >
+                Alternatively
+              </h5>
+
+              <div class="card-deck">
+                <div class="card border-0 rounded-0 shadow-sm">
+                  <div class="card-body p-5">
+                    <p
+                      class="card-title font-weight-bold position-relative font-family-lato"
+                    >
+                      <i class="fas fa-link"></i>Purchased a Domain?
+                    </p>
+
+                    <p class="card-text font-family-opensans">
+                      If you purchased a new domain, its DNS may not be pointed
+                      correctly.
+                    </p>
+
+                    <a
+                      class="font-family-lato"
+                      href="https://www.da-manager.com/clients/knowledgebase/15/Domains"
+                      >Click here to learn more.</a
+                    >
+                  </div>
+                </div>
+
+                <div class="card border-0 rounded-0 shadow-sm">
+                  <div class="card-body p-5">
+                    <p
+                      class="card-title font-weight-bold position-relative font-family-lato"
+                    >
+                      <i class="fas fa-server"></i>Made DNS Changes?
+                    </p>
+
+                    <p class="card-text font-family-opensans">
+                      Then you might have to wait a while until they propagate.
+                    </p>
+
+                    <a
+                      class="font-family-lato"
+                      href="https://www.da-manager.com/clients/knowledgebase/15/Domains"
+                      >Click here to learn more.</a
+                    >
+                  </div>
+                </div>
+
+                <div class="card border-0 rounded-0 shadow-sm">
+                  <div class="card-body p-5">
+                    <p
+                      class="card-title font-weight-bold position-relative font-family-lato"
+                    >
+                      <i class="fas fa-lock"></i>Installed SSL Recently?
+                    </p>
+
+                    <p class="card-text font-family-opensans">
+                      If so, you should allow some time for the change to
+                      propagate.
+                    </p>
+
+                    <a
+                      class="font-family-lato"
+                      href="https://www.da-manager.com/clients/knowledgebase/6/SSL-Certificate"
+                      >Click here to learn more.</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript">
+      (function ($) {
+        function setMainSectionMargin() {
+          var mainSection = $("#main");
+          var mainSectionHeight = mainSection.height();
+          var messageBoxHeight = $("#message").height() + 100;
+
+          var heightDifferance = messageBoxHeight - mainSectionHeight;
+          var marginBottom = heightDifferance + 70;
+
+          mainSection.css({ "margin-bottom": marginBottom + "px" });
+        }
+
+        setMainSectionMargin();
+        $(window).on("resize", setMainSectionMargin);
+      })(jQuery);
+    </script>
+  </body>
+</html>
